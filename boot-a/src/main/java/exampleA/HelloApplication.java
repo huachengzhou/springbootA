@@ -13,12 +13,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
-@SpringBootApplication(exclude = { RedisAutoConfiguration.class })
-@Configuration
+@Controller //标明这是一个SpringMVC的Controller控制器
+@SpringBootApplication(exclude = { RedisAutoConfiguration.class })//Spring Boot项目的核心注解，主要目的是开启自动配置
+@Configuration//这是一个配置Spring的配置类；
 public class HelloApplication {
 
-    @RequestMapping("hello")
+    @RequestMapping(value = "hello",name = "http://localhost:8080/hello 浏览器输入即可")
     @ResponseBody
     public String hello() {
         return "hello world! ";
@@ -30,6 +30,7 @@ public class HelloApplication {
         return converter;
     }
 
+    //main方法：在main方法中启动一个应用，即：这个应用的入口；
     public static void main(String[] args) {
         // SpringApplication.run(HelloApplication.class, args);
         SpringApplication application = new SpringApplication(HelloApplication.class);
