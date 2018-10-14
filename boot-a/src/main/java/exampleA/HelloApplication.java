@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller //标明这是一个SpringMVC的Controller控制器
-@SpringBootApplication(exclude = { RedisAutoConfiguration.class })//Spring Boot项目的核心注解，主要目的是开启自动配置
+@SpringBootApplication(exclude = { RedisAutoConfiguration.class })//Spring Boot项目的核心注解，主要目的是开启自动配置 (如果我们不需要Spring Boot自动配置，想关闭某一项的自动配置,exclude排除此项配置)
 @Configuration//这是一个配置Spring的配置类；
 public class HelloApplication {
 
@@ -36,6 +36,9 @@ public class HelloApplication {
         SpringApplication application = new SpringApplication(HelloApplication.class);
         application.setBannerMode(Mode.CONSOLE);// banner 处理
         application.run(args);
+        //banner 生成器 http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
     }
+
+    // @EnableAutoConfiguration：启用自动配置，该注解会使Spring Boot根据项目中依赖的jar包自动配置项目的配置项：
 
 }
