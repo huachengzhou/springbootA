@@ -11,6 +11,7 @@
   <modules>
     <module>boot-a</module>
     <module>boot-b</module>
+      <module>boot-c</module>
   </modules>
 
   <name>spring-bootA</name>
