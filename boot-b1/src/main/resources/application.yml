@@ -1,0 +1,19 @@
+server:
+  port: 8090 #配置程序端口,默认为8080
+  session-timeout: 30 #用户会话session过期时间,以秒为单位
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+  #context-path: #配置访问路径,默认为/
+
+#查看springboot开启了哪些配置
+debug: true
+
+#配置日志
+logging:
+  #配置日志文件路径
+  level:
+    xatu.zsl: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+  #采用相对路径方式将日志文件输出到【log\myspringboot.log】
+  file: boot-b1\myspringboot.log
