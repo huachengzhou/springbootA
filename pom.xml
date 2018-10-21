@@ -13,6 +13,8 @@
         <module>boot-b</module>
         <module>boot-c</module>
         <module>boot-b1</module>
+        <module>boot-RESTful</module>
+        <module>thymeleafA</module>
     </modules>
 
     <name>spring-bootA</name>
