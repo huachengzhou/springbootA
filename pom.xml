@@ -15,6 +15,7 @@
         <module>boot-b1</module>
         <module>boot-RESTful</module>
         <module>thymeleafA</module>
+        <module>jspModel</module>
     </modules>
 
     <name>spring-bootA</name>
