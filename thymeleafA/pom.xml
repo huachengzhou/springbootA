@@ -107,9 +107,6 @@
            <resource>
                <directory>src/main/resources</directory>
            </resource>
-           <resource>
-               <directory>src/main/templates</directory>
-           </resource>
        </resources>
     </build>
 </project>
