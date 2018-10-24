@@ -16,6 +16,7 @@
         <module>boot-RESTful</module>
         <module>thymeleafA</module>
         <module>jspModel</module>
+        <module>boot-mybatis</module>
     </modules>
 
     <name>spring-bootA</name>
