@@ -17,6 +17,8 @@
         <module>thymeleafA</module>
         <module>jspModel</module>
         <module>boot-mybatis</module>
+        <module>boot-jdbc</module>
+        <module>utils</module>
     </modules>
 
     <name>spring-bootA</name>
@@ -24,6 +26,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <poi.version>3.9</poi.version>
     </properties>
 
     <parent>
@@ -110,6 +113,30 @@
             <artifactId>cglib</artifactId>
             <version>3.2.6</version>
         </dependency>
+
+
+        <!-- poi start -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
