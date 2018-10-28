@@ -6,12 +6,29 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @Author noatn
+ * @Author zch
  * @Description
  * @createDate 2018/10/27
  **/
 public class User implements Serializable {
 
+    public static class FinalFiled {
+        public final static String ID = "id";
+        public final static String CREATE = "create";
+        public final static String NAME = "name";
+        public final static String USERNAME = "username";
+        public final static String PASSWORD = "password";
+        public final static String BIRTHDAY = "birthday";
+        public final static String ADDRESS = "address";
+        public final static String ACCOUNT = "account";
+        public final static String PERMISSION = "permission";
+        public final static String GROUP = "group";
+        public final static String SEX = "sex";
+        public final static String JURISDICTION = "jurisdiction";
+        public final static String ROLE = "role";
+        public final static String AGE = "age";
+        public final static String CREATEDATE = "createDate";
+    }
     private String id;
     private String create;
     private String name;
@@ -170,4 +187,5 @@ public class User implements Serializable {
                 ", createDate=" + createDate +
                 '}';
     }
+
 }

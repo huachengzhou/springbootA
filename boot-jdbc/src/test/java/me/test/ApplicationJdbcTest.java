@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import tool.help.Zhou_String;
 import tool.help.Zhou_Word;
 
+import javax.sql.DataSource;
 import java.util.Date;
 import java.util.Random;
 import java.util.UUID;
@@ -29,6 +30,7 @@ public class ApplicationJdbcTest {
 
     @Autowired
     private UserService userService;
+
 
     @Test
     public void add(){

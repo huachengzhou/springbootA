@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blue.mapper.UserBootMapper" >
+  <resultMap id="BaseResultMap" type="com.blue.entity.UserBoot" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="create" property="create" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="group" property="group" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="jurisdiction" property="jurisdiction" jdbcType="VARCHAR" />
+    <result column="permission" property="permission" jdbcType="VARCHAR" />
+    <result column="role" property="role" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="INTEGER" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create, name, username, birthday, address, account, group, sex, jurisdiction, 
+    permission, role, age, password, createDate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from spring-boot-user
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from spring-boot-user
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.blue.entity.UserBoot" >
+    insert into spring-boot-user (id, create, name, 
+      username, birthday, address, 
+      account, group, sex, 
+      jurisdiction, permission, role, 
+      age, password, createDate
+      )
+    values (#{id,jdbcType=VARCHAR}, #{create,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{birthday,jdbcType=TIMESTAMP}, #{address,jdbcType=VARCHAR}, 
+      #{account,jdbcType=VARCHAR}, #{group,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{jurisdiction,jdbcType=VARCHAR}, #{permission,jdbcType=VARCHAR}, #{role,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, #{createdate,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.blue.entity.UserBoot" >
+    insert into spring-boot-user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="create != null" >
+        create,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="birthday != null" >
+        birthday,
+      </if>
+      <if test="address != null" >
+        address,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="group != null" >
+        group,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="jurisdiction != null" >
+        jurisdiction,
+      </if>
+      <if test="permission != null" >
+        permission,
+      </if>
+      <if test="role != null" >
+        role,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="create != null" >
+        #{create,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null" >
+        #{group,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="jurisdiction != null" >
+        #{jurisdiction,jdbcType=VARCHAR},
+      </if>
+      <if test="permission != null" >
+        #{permission,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.blue.entity.UserBoot" >
+    update spring-boot-user
+    <set >
+      <if test="create != null" >
+        create = #{create,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="address != null" >
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="group != null" >
+        group = #{group,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="jurisdiction != null" >
+        jurisdiction = #{jurisdiction,jdbcType=VARCHAR},
+      </if>
+      <if test="permission != null" >
+        permission = #{permission,jdbcType=VARCHAR},
+      </if>
+      <if test="role != null" >
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.blue.entity.UserBoot" >
+    update spring-boot-user
+    set create = #{create,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=TIMESTAMP},
+      address = #{address,jdbcType=VARCHAR},
+      account = #{account,jdbcType=VARCHAR},
+      group = #{group,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      jurisdiction = #{jurisdiction,jdbcType=VARCHAR},
+      permission = #{permission,jdbcType=VARCHAR},
+      role = #{role,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      password = #{password,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=DATE}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
