@@ -19,6 +19,7 @@
         <module>boot-mybatis</module>
         <module>boot-jdbc</module>
         <module>utils</module>
+        <module>boot-d</module>
     </modules>
 
     <name>spring-bootA</name>
@@ -53,6 +54,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.google.api/api-common -->
         <dependency>
