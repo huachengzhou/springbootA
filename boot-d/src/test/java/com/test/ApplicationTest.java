@@ -2,6 +2,7 @@ package com.test;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.blue.service.UserBootService;
 import com.blue.spring.ApplicationDemo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +37,10 @@ public class ApplicationTest {
     @Qualifier(value = "druidDataSource")
     @Autowired
     private DruidDataSource druidDataSource;
+
+    @Autowired
+    private UserBootService userBootService;
+
 
     @Test
     public void testA() throws Exception {

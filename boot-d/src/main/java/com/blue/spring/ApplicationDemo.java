@@ -1,5 +1,6 @@
 package com.blue.spring;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -9,7 +10,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @Description
  * @createDate 2018/10/28
  **/
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class},scanBasePackages = {"com.blue.spring.config","com.blue.dal.dao","com.blue.dal.mapper"})
+@MapperScan("com.blue.dal.mapper")
+@SpringBootApplication(scanBasePackages = {"com.blue"})
 public class ApplicationDemo {
     public static void main(String[] args) {
         SpringApplication.run(ApplicationDemo.class, args);
