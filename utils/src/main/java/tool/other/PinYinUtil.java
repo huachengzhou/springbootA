@@ -18,7 +18,6 @@ public class PinYinUtil {
 
     //通过构造方法进行初始化
     public PinYinUtil(){
-
         format = new HanyuPinyinOutputFormat();
         /*
          * 设置需要转换的拼音格式
