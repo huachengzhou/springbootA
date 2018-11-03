@@ -24,4 +24,12 @@ public class BookA {
     public void setBookmark(String bookmark) {
         this.bookmark = bookmark;
     }
+
+    @Override
+    public String toString() {
+        return "BookA{" +
+                "author='" + author + '\'' +
+                ", bookmark='" + bookmark + '\'' +
+                '}';
+    }
 }

@@ -14,6 +14,6 @@ public class BookConfigTest {
     @Test
     public void testBook(){
         BookA book = (BookA)context.getBean("bookA");
-        logger.info(""+book);
+        System.out.println(book);
     }
 }
