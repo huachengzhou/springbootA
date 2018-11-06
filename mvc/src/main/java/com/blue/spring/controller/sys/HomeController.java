@@ -21,4 +21,5 @@ public class HomeController {
         ModelAndView mv = new ModelAndView(String.format("%s%s", Views.WEB_INF.getVar(), HomeFinalString.HOME));
         return mv;
     }
+
 }

@@ -1,6 +1,9 @@
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="/css/cssBootStrap.jsp" %>
 <html>
+<head>
+    <%@include file="/css/cssBootStrap.jsp" %>
+</head>
 <body>
 <div class="container">
     <div class="row">
@@ -11,13 +14,14 @@
         </div>
         <div class="form-group">
             <div class="col-sm-12" style="margin-bottom:40px;">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="${pageContext.request.contextPath}/sys/home">首页</a></li>
-                    <li class="active"><a href="${pageContext.request.contextPath}/restful/helloWorld">restful helloWorld</a></li>
-                </ul>
+
             </div>
         </div>
     </div>
 </div>
 </body>
+<script type="text/javascript">
+
+
+</script>
 </html>
