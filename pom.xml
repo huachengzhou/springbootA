@@ -23,6 +23,7 @@
         <module>aop-ioc</module>
         <module>mvc</module>
         <module>Chapter3</module>
+        <module>Chapter4</module>
     </modules>
 
     <name>spring-bootA</name>

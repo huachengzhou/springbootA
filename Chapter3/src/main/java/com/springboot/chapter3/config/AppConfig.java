@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 @ComponentScan(basePackages = "com.springboot.chapter3.*")
-@ImportResource(value = {"classpath:spring-other.xml"})
+//@ImportResource(value = {"classpath:spring-other.xml"})
 public class AppConfig {
 	
 //	@Bean(name = "dataSource", destroyMethod = "close")
