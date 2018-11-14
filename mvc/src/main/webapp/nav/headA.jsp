@@ -13,7 +13,7 @@
             <div class="col-sm-12" style="margin-bottom:40px;">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="${pageContext.request.contextPath}/sys/home">首页</a></li>
-                    <li class="active"><a href="${pageContext.request.contextPath}/restful/helloWorld">restful helloWorld</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/file/ForWard.action">文件上传测试</a></li>
                 </ul>
             </div>
         </div>
